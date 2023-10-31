@@ -1,0 +1,30 @@
+﻿@using AuthenticationSystem.Client.Models.Login;
+
+<div class="card mx-auto my-auto w-25">
+    <div class="card-header">
+        <!-- Pills navs -->
+        <ul class="nav nav-pills nav-justified mb-3" id="ex1" role="tablist">
+            <li class="nav-item" role="presentation">
+                <a class="nav-link active btn-dark text-light" id="tab-login" data-toggle="tab" href="#pills-login" role="tab"
+                   aria-controls="pills-login" aria-selected="true">Login</a>
+            </li>
+            <li class="nav-item" role="presentation">
+                <a class="nav-link btn-dark text-light" id="tab-register" data-toggle="tab" href="#pills-register" role="tab"
+                   aria-controls="pills-register" aria-selected="false">Register</a>
+            </li>
+        </ul>
+    </div>
+    <!-- Pills navs -->
+    <!-- Pills content -->
+    <div class="tab-content">
+        <div class="chart tab-pane fade show active" id="pills-login" role="tabpanel" aria-labelledby="tab-login">
+            <partial name="_LogInForm" model="@LoginViewModel.CreateEmpty()" />
+        </div>
+        <div class="chart tab-pane fade" id="pills-register" role="tabpanel" aria-labelledby="tab-register">
+            <partial name="_registrationForm" model="@RegistrationViewModel.CreateEmpty()" />
+        </div>
+    </div>
+    <!-- Pills content -->
+</div>
+
+

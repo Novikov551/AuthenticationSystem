@@ -1,0 +1,69 @@
+is_global = true
+build_property.TargetFramework = net7.0
+build_property.TargetPlatformMinVersion = 
+build_property.UsingMicrosoftNETSdkWeb = true
+build_property.ProjectTypeGuids = 
+build_property.InvariantGlobalization = 
+build_property.PlatformNeutralAssembly = 
+build_property.EnforceExtendedAnalyzerRules = 
+build_property._SupportedPlatformList = Linux,macOS,Windows
+build_property.RootNamespace = AuthenticationSystem.Client
+build_property.RootNamespace = AuthenticationSystem.Client
+build_property.ProjectDir = C:\Users\nikit\OneDrive\Рабочий стол\MyProjects\AuthenticationSystem\AuthenticationSystem.Client\
+build_property.RazorLangVersion = 7.0
+build_property.SupportLocalizedComponentNames = 
+build_property.GenerateRazorMetadataSourceChecksumAttributes = 
+build_property.MSBuildProjectDirectory = C:\Users\nikit\OneDrive\Рабочий стол\MyProjects\AuthenticationSystem\AuthenticationSystem.Client
+build_property._RazorSourceGeneratorDebug = 
+
+[C:/Users/nikit/OneDrive/Рабочий стол/MyProjects/AuthenticationSystem/AuthenticationSystem.Client/Views/Account/Login.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjb3VudFxMb2dpbi5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/nikit/OneDrive/Рабочий стол/MyProjects/AuthenticationSystem/AuthenticationSystem.Client/Views/Home/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/nikit/OneDrive/Рабочий стол/MyProjects/AuthenticationSystem/AuthenticationSystem.Client/Views/Home/Privacy.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcml2YWN5LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/nikit/OneDrive/Рабочий стол/MyProjects/AuthenticationSystem/AuthenticationSystem.Client/Views/Shared/Error.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVycm9yLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/nikit/OneDrive/Рабочий стол/MyProjects/AuthenticationSystem/AuthenticationSystem.Client/Views/Shared/_Footer.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9Gb290ZXIuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/nikit/OneDrive/Рабочий стол/MyProjects/AuthenticationSystem/AuthenticationSystem.Client/Views/Shared/_FooterScripts.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9Gb290ZXJTY3JpcHRzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/nikit/OneDrive/Рабочий стол/MyProjects/AuthenticationSystem/AuthenticationSystem.Client/Views/Shared/_HeaderScripts.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9IZWFkZXJTY3JpcHRzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/nikit/OneDrive/Рабочий стол/MyProjects/AuthenticationSystem/AuthenticationSystem.Client/Views/Shared/_ValidationScriptsPartial.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/nikit/OneDrive/Рабочий стол/MyProjects/AuthenticationSystem/AuthenticationSystem.Client/Views/_ViewImports.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/nikit/OneDrive/Рабочий стол/MyProjects/AuthenticationSystem/AuthenticationSystem.Client/Views/_ViewStart.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/nikit/OneDrive/Рабочий стол/MyProjects/AuthenticationSystem/AuthenticationSystem.Client/Controllers/_Layout.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Q29udHJvbGxlcnNcX0xheW91dC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = b-5jwcfhnvu5
+
+[C:/Users/nikit/OneDrive/Рабочий стол/MyProjects/AuthenticationSystem/AuthenticationSystem.Client/Views/Account/_Layout.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjb3VudFxfTGF5b3V0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = b-xhoh1wvztq
+
+[C:/Users/nikit/OneDrive/Рабочий стол/MyProjects/AuthenticationSystem/AuthenticationSystem.Client/Views/Shared/_Layout.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = b-7cbaaamhjh

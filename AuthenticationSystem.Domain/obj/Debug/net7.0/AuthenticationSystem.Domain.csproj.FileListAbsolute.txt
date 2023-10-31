@@ -1,0 +1,14 @@
+C:\Users\nikit\OneDrive\Рабочий стол\MyProjects\AuthenticationSystem\AuthenticationSystem.Domain\bin\Debug\net7.0\AuthenticationSystem.Domain.deps.json
+C:\Users\nikit\OneDrive\Рабочий стол\MyProjects\AuthenticationSystem\AuthenticationSystem.Domain\bin\Debug\net7.0\AuthenticationSystem.Domain.dll
+C:\Users\nikit\OneDrive\Рабочий стол\MyProjects\AuthenticationSystem\AuthenticationSystem.Domain\bin\Debug\net7.0\AuthenticationSystem.Domain.pdb
+C:\Users\nikit\OneDrive\Рабочий стол\MyProjects\AuthenticationSystem\AuthenticationSystem.Domain\obj\Debug\net7.0\AuthenticationSystem.Domain.csproj.AssemblyReference.cache
+C:\Users\nikit\OneDrive\Рабочий стол\MyProjects\AuthenticationSystem\AuthenticationSystem.Domain\obj\Debug\net7.0\AuthenticationSystem.Domain.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\nikit\OneDrive\Рабочий стол\MyProjects\AuthenticationSystem\AuthenticationSystem.Domain\obj\Debug\net7.0\AuthenticationSystem.Domain.AssemblyInfoInputs.cache
+C:\Users\nikit\OneDrive\Рабочий стол\MyProjects\AuthenticationSystem\AuthenticationSystem.Domain\obj\Debug\net7.0\AuthenticationSystem.Domain.AssemblyInfo.cs
+C:\Users\nikit\OneDrive\Рабочий стол\MyProjects\AuthenticationSystem\AuthenticationSystem.Domain\obj\Debug\net7.0\AuthenticationSystem.Domain.csproj.CoreCompileInputs.cache
+C:\Users\nikit\OneDrive\Рабочий стол\MyProjects\AuthenticationSystem\AuthenticationSystem.Domain\obj\Debug\net7.0\AuthenticationSystem.Domain.dll
+C:\Users\nikit\OneDrive\Рабочий стол\MyProjects\AuthenticationSystem\AuthenticationSystem.Domain\obj\Debug\net7.0\refint\AuthenticationSystem.Domain.dll
+C:\Users\nikit\OneDrive\Рабочий стол\MyProjects\AuthenticationSystem\AuthenticationSystem.Domain\obj\Debug\net7.0\AuthenticationSystem.Domain.pdb
+C:\Users\nikit\OneDrive\Рабочий стол\MyProjects\AuthenticationSystem\AuthenticationSystem.Domain\obj\Debug\net7.0\ref\AuthenticationSystem.Domain.dll
+C:\Users\nikit\OneDrive\Рабочий стол\MyProjects\AuthenticationSystem\AuthenticationSystem.Domain\bin\Debug\net7.0\AuthenticationSystem.Domain.runtimeconfig.json
+C:\Users\nikit\OneDrive\Рабочий стол\MyProjects\AuthenticationSystem\AuthenticationSystem.Domain\obj\Debug\net7.0\AuthenticationSystem.Domain.genruntimeconfig.cache

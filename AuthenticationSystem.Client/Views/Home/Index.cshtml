@@ -1,0 +1,14 @@
+﻿@using System.Security.Claims;
+@{
+    var user = Context.User;
+    var username = user.Claims.First(c => c.Type == ClaimTypes.Name).Value;
+    var surname = user.Claims.First(c => c.Type == ClaimTypes.Surname).Value;
+    var email = user.Claims.First(c => c.Type == ClaimTypes.Email).Value;
+
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="text-center">
+    <p class="text-white text-lg">Welcome @username @surname!</p>
+    <p class="text-white text-lg">Your email is @email</p>
+</div>

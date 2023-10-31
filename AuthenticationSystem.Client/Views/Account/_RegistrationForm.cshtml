@@ -1,0 +1,77 @@
+﻿@using AuthenticationSystem.Client.Models.Login;
+@model RegistrationViewModel;
+<div class="card-body">
+    <form asp-controller="Account" asp-action="Register" method="post" id="register-form">
+        <div class="text-center mb-3">
+            <p class="text-lg">Sign up with:</p>
+            <button type="button" class="btn btn-link btn-floating mx-1">
+                <i class="fab fa-facebook-f"></i>
+            </button>
+
+            <button type="button" class="btn btn-link btn-floating mx-1">
+                <i class="fab fa-google"></i>
+            </button>
+
+            <button type="button" class="btn btn-link btn-floating mx-1">
+                <i class="fab fa-twitter"></i>
+            </button>
+
+            <button type="button" class="btn btn-link btn-floating mx-1">
+                <i class="fab fa-github"></i>
+            </button>
+        </div>
+
+        <p class="text-center text-lg">or:</p>
+
+        <!-- Name input -->
+        <div class="form-outline">
+            <label class="form-label text-lg" asp-for="Name">Name</label>
+            <input asp-for="Name" type="text" id="registerName" class="form-control" placeholder="Enter your name" />
+            <p>
+                We do not transfer personal data to third parties.
+            </p>
+        </div>
+
+        <!-- Username input -->
+        <div class="form-outline">
+            <label class="form-label text-lg" asp-for="Surname">Username</label>
+            <input asp-for="Surname" type="text" id="registerUsername" class="form-control" placeholder="Enter your surname" />
+            <p>
+                We do not transfer personal data to third parties.
+            </p>
+        </div>
+
+        <!-- Email input -->
+        <div class="form-outline">
+            <label class="form-label text-lg" asp-for="Email">Email</label>
+            <input asp-for="Email" type="email" id="registerEmail" class="form-control" placeholder="Enter email" />
+            <p>
+                We do not transfer personal data to third parties.
+            </p>
+        </div>
+
+        <!-- Password input -->
+        <div class="form-outline">
+            <label class="form-label text-lg" asp-for="Email">Password</label>
+            <input asp-for="Password" type="password" id="registerPassword" class="form-control" placeholder="Enter password" />
+        </div>
+
+        <!-- Repeat Password input -->
+        <div class="form-outline">
+            <label class="form-label text-lg" asp-for="Email">Repeat password</label>
+            <input asp-for="PasswordConfirm" type="password" id="confirmPassword" class="form-control" placeholder="Repeat password" />
+        </div>
+    </form>
+</div>
+<div class="card-footer">
+    <!-- Checkbox -->
+    <div class="form-check d-flex row ml-1">
+        <input class="form-check-input me-2 text-lg" type="checkbox" value="" id="registerCheck" checked
+               aria-describedby="registerCheckHelpText" />
+        <label class="form-check-label text-lg" for="registerCheck">
+            I have read and agree to the terms
+        </label>
+    </div>
+    <!-- Submit button -->
+    <button type="submit" form="register-form" class="btn btn-dark btn-block mb-3 text-lg">Sign in</button>
+</div>
