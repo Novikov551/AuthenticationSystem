@@ -12,3 +12,6 @@ C:\Users\nikit\OneDrive\Рабочий стол\MyProjects\AuthenticationSystem\
 C:\Users\nikit\OneDrive\Рабочий стол\MyProjects\AuthenticationSystem\AuthenticationSystem.Shared\obj\Debug\net7.0\ref\AuthenticationSystem.Shared.dll
 C:\Users\nikit\OneDrive\Рабочий стол\MyProjects\AuthenticationSystem\AuthenticationSystem.Shared\bin\Debug\net7.0\AuthenticationSystem.Shared.runtimeconfig.json
 C:\Users\nikit\OneDrive\Рабочий стол\MyProjects\AuthenticationSystem\AuthenticationSystem.Shared\obj\Debug\net7.0\AuthenticationSystem.Shared.genruntimeconfig.cache
+C:\Users\nikit\OneDrive\Рабочий стол\MyProjects\AuthenticationSystem\AuthenticationSystem.Shared\bin\Debug\net7.0\AuthenticationSystem.Domain.dll
+C:\Users\nikit\OneDrive\Рабочий стол\MyProjects\AuthenticationSystem\AuthenticationSystem.Shared\bin\Debug\net7.0\AuthenticationSystem.Domain.pdb
+C:\Users\nikit\OneDrive\Рабочий стол\MyProjects\AuthenticationSystem\AuthenticationSystem.Shared\obj\Debug\net7.0\AuthenticationSystem.Shared.csproj.CopyComplete

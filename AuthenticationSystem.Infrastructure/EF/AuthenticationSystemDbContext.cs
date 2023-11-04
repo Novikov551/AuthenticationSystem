@@ -23,6 +23,7 @@ namespace AuthenticationSystem.Infrastructure.EF;
 public class AuthenticationSystemDbContext : DbContext, IUnitOfWork
 {
     public DbSet<User> Users { get; set; }
+    public DbSet<Role> Roles { get; set; }
 
     public AuthenticationSystemDbContext(DbContextOptions<AuthenticationSystemDbContext> options) : base(options)
     {

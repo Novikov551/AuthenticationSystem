@@ -1108,6 +1108,7 @@
         "type": "project",
         "framework": ".NETCoreApp,Version=v7.0",
         "dependencies": {
+          "AuthenticationSystem.Domain": "1.0.0",
           "EntityFramework": "6.4.4",
           "Microsoft.AspNetCore.OpenApi": "7.0.13",
           "Microsoft.EntityFrameworkCore.Abstractions": "7.0.13",

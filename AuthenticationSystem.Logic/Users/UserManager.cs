@@ -6,6 +6,7 @@ using Microsoft.Extensions.Logging;
 using UserAuthenticationSystem.Domain.Core;
 using Microsoft.EntityFrameworkCore;
 using FluentResults;
+using AuthenticationSystem.Domain.Core;
 
 namespace AuthenticationSystem.Logic.Users
 {
@@ -30,12 +31,20 @@ namespace AuthenticationSystem.Logic.Users
         {
             try
             {
+                var role = await _unitOfWork.Repository<Role>().Query.FirstOrDefaultAsync(r => r.RoleType == RoleType.User && r.RoleName == "User");
+                if (role is null)
+                {
+                    throw new EntityNotFoundException(typeof(Role), nameof(RoleType.User));
+                }
+
                 var newUser = new User
                 {
                     EmailHash = HashGenerator.GetHash(user.Email, HashSalt.SALT),
                     PasswordHash = HashGenerator.GetHash(user.Password, HashSalt.SALT),
                     Surname = user.Surname,
                     Name = user.Name,
+                    RoleId = role.Id,
+                    Role = role
                 };
 
                 _unitOfWork.Repository<User>().Create(newUser);
@@ -116,10 +125,14 @@ namespace AuthenticationSystem.Logic.Users
             {
 
                 var user = await FindByEmailAsync(email);
+                var userRole = await _unitOfWork.Repository<Role>().FindAsync(user.RoleId);
+
                 if (user is null)
                 {
                     return Result.Fail("User not found");
                 }
+
+                user.Role = userRole;
 
                 var passHash = HashGenerator.GetHash(password, HashSalt.SALT);
 

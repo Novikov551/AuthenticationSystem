@@ -275,7 +275,11 @@
         "frameworks": {
           "net7.0": {
             "targetAlias": "net7.0",
-            "projectReferences": {}
+            "projectReferences": {
+              "C:\\Users\\nikit\\OneDrive\\Рабочий стол\\MyProjects\\AuthenticationSystem\\AuthenticationSystem.Domain\\AuthenticationSystem.Domain.csproj": {
+                "projectPath": "C:\\Users\\nikit\\OneDrive\\Рабочий стол\\MyProjects\\AuthenticationSystem\\AuthenticationSystem.Domain\\AuthenticationSystem.Domain.csproj"
+              }
+            }
           }
         },
         "warningProperties": {

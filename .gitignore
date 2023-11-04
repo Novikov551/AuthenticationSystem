@@ -1,0 +1,17 @@
+﻿################################################################################
+# This .gitignore file was automatically created by Microsoft(R) Visual Studio.
+################################################################################
+
+/.vs/AuthenticationSystem/DesignTimeBuild/.dtbcache.v2
+/.vs/AuthenticationSystem/FileContentIndex/0440e020-30b8-4dfd-8cbb-2cea8bc735d5.vsidx
+/.vs/AuthenticationSystem/FileContentIndex/0bf06676-7e8f-40cd-ab07-17fcc82acedf.vsidx
+/.vs/AuthenticationSystem/FileContentIndex/21689f20-de4d-468a-bdc7-85b1d0e63b07.vsidx
+/.vs/AuthenticationSystem/FileContentIndex/b9948419-bcf8-4005-b51f-28b2e04cd4ce.vsidx
+*.vsidx
+/.vs/AuthenticationSystem/v17/.futdcache.v2
+/.vs/ProjectEvaluation/authenticationsystem.metadata.v7.bin
+/.vs/ProjectEvaluation/authenticationsystem.projects.v7.bin
+/AuthenticationSystem/bin/Debug/net7.0/AuthenticationSystem.deps.json
+/AuthenticationSystem/obj/AuthenticationSystem.csproj.nuget.dgspec.json
+/AuthenticationSystem/obj/project.assets.json
+/AuthenticationSystem.Client/bin/Debug/net7.0/AuthenticationSystem.Client.deps.json

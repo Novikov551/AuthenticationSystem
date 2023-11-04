@@ -1,6 +1,4 @@
-﻿using AuthenticationSystem.Shared;
-using FluentResults;
-using UserAuthenticationSystem.Domain.Core;
+﻿using FluentResults;
 
 namespace AuthenticationSystem.Logic.Users
 {

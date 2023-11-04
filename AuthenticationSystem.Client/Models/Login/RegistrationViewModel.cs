@@ -1,5 +1,6 @@
 ﻿using FluentValidation;
 using System.ComponentModel.DataAnnotations;
+using System.Text.RegularExpressions;
 
 namespace AuthenticationSystem.Client.Models.Login
 {
@@ -36,14 +37,14 @@ namespace AuthenticationSystem.Client.Models.Login
         }
     }
 
-    //public class RegistrationViewModelValidator : AbstractValidator<RegistrationViewModel>
-    //{
-    //    public RegistrationViewModelValidator()
-    //    {
-    //        RuleFor(p => p.Email).EmailAddress();
-    //        RuleFor(p => p.Password).MinimumLength(8).Matches("\"^(?=.*[A-Za-z])(?=.*\\d)[A-Za-z\\d]{8,}$\"");
-    //        RuleFor(p => p.Name).MinimumLength(2);
-    //        RuleFor(p => p.Surname).MinimumLength(2);
-    //    }
-    //}
+    public class RegistrationViewModelValidator : AbstractValidator<RegistrationViewModel>
+    {
+        public RegistrationViewModelValidator()
+        {
+            RuleFor(p => p.Email).EmailAddress();
+            RuleFor(p => p.Password).Matches(new Regex(@"^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9])(?=.*?[#?!@$%^&*-]).{8,}$"));
+            RuleFor(p => p.Name).MinimumLength(2);
+            RuleFor(p => p.Surname).MinimumLength(2);
+        }
+    }
 }

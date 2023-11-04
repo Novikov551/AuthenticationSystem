@@ -29,7 +29,9 @@ namespace AuthenticationSystem.Client.Extensions
                     .AddCookie(options =>
                     {
                         options.LoginPath = "/Account/Login";
-                        options.AccessDeniedPath = "/Error";
+                        options.AccessDeniedPath = "/Base/AccessDenied";
+                        options.LogoutPath = "/Account/Logout";
+                        options.ExpireTimeSpan = TimeSpan.FromDays(7);
                     });
             services.AddAuthorization()// добавление сервисов авторизации
                 .AddScoped<IAuthorizationService, AuthorizationService>()

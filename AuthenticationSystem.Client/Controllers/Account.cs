@@ -1,30 +1,28 @@
 ﻿using AuthenticationSystem.Client.Controllers;
 using AuthenticationSystem.Client.Models;
 using AuthenticationSystem.Client.Models.Login;
-using AuthenticationSystem.Client.Services;
-using AuthenticationSystem.Shared;
-using Microsoft.AspNetCore.Authentication;
-using Microsoft.AspNetCore.Authentication.Cookies;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
-using System.Security.Claims;
 
 namespace UserAuthenticationSystem.Client.Controllers
 {
     public class AccountController : BaseController
     {
-        private readonly IAuthorizationService _authorizationService;
+        private readonly AuthenticationSystem.Client.Services.IAuthorizationService _authorizationService;
 
-        public AccountController(IAuthorizationService authorizationService)
+        public AccountController(AuthenticationSystem.Client.Services.IAuthorizationService authorizationService)
         {
             _authorizationService = authorizationService;
         }
 
+        [AllowAnonymous]
         [HttpGet]
         public async Task<IActionResult> IndexAsync()
         {
             return View("Index");
         }
 
+        [AllowAnonymous]
         [HttpPost]
         public async Task<IActionResult> LoginAsync([FromForm] LoginViewModel loginInfo)
         {
@@ -33,16 +31,17 @@ namespace UserAuthenticationSystem.Client.Controllers
                 return View("Index");
             }
 
-            var authResult = await _authorizationService.LoginAsync(loginInfo.Email, loginInfo.Password);
+            var authResult = await _authorizationService.LoginAsync(loginInfo);
 
             if (authResult.IsFailed)
             {
                 return View("Index");
             }
 
-            return RedirectToAction("Index", "Home");
+            return Redirect("/Home/Index");
         }
 
+        [AllowAnonymous]
         [HttpPost]
         public async Task<IActionResult> RegisterAsync([FromForm] RegistrationViewModel registrationInfo)
         {

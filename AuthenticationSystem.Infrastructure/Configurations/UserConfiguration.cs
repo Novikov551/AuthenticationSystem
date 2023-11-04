@@ -31,6 +31,26 @@ namespace AuthenticationSystem.Infrastructure.Configurations
                 .HasColumnType(ConfigurationConstants.ContentTypeName)
                 .HasColumnName("email_hash")
                 .IsRequired();
+
+            builder.Property(e => e.RoleId)
+                .HasColumnType(ConfigurationConstants.GuidTypeName)
+                .HasColumnName("role_id")
+                .IsRequired();
+
+            builder.Property(e => e.BirthDate)
+                .HasColumnType(ConfigurationConstants.DateOnlyTypeName)
+                .HasColumnName("birth_date");
+
+            builder.Property(e => e.PhoneNumber)
+                .HasColumnType(ConfigurationConstants.IntegerTypeName)
+                .HasColumnName("phone_number");
+
+            builder.HasOne(e => e.Role)
+                .WithMany()
+                .HasForeignKey(e => e.RoleId)
+                .OnDelete(DeleteBehavior.NoAction);
+
+            builder.HasIndex(e => e.EmailHash).IsUnique();
         }
     }
 }

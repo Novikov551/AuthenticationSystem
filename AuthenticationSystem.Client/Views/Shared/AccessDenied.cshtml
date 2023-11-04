@@ -1,0 +1,14 @@
+﻿@model AccessDeniedViewModel;
+@{
+    ViewData["Title"] = "AccessDenied";
+}
+
+<h1 class="text-white text-lg mx-auto">Access denied.</h1>
+
+@if (Model.ShowRoleTypeId)
+{
+    <p class="text-white text-lg mx-auto">
+        <strong>Access to content with role:</strong> <code>@Model.RoleType</code> <strong>denied</strong>
+    </p>
+}
+

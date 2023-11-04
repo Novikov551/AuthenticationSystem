@@ -43,8 +43,4 @@
     <ProjectReference Include="..\AuthenticationSystem.Shared\AuthenticationSystem.Shared.csproj" />
   </ItemGroup>
 
-  <ItemGroup>
-    <Folder Include="NewFolder\" />
-  </ItemGroup>
-
 </Project>

@@ -1,8 +1,10 @@
 using AuthenticationSystem.Extensions;
 using AuthenticationSystem.Logic.Users;
+using AuthenticationSystem.Services;
 using AuthenticationSystem.Shared;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.IdentityModel.Tokens;
+using Stemy.Dairy.FactStash.Services;
 using UserAuthenticationSystem.Client.Auth;
 using UserAuthenticationSystem.Domain.Core;
 
@@ -28,33 +30,15 @@ public class Startup
         services.AddEndpointsApiExplorer();
         services.AddSwaggerGen();
 
+        // Add services to the container.
         services.AddInfrastructureServices(Configuration, Environment);
         services.AddScoped<IUserManager<User,CreateUserRequest>, UserManager>();
+        services.AddSingleton<SeederService>();
 
-        // Add services to the container.
-        services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
-       .AddJwtBearer(options =>
-       {
-           options.TokenValidationParameters = new TokenValidationParameters
-           {
-               // указывает, будет ли валидироваться издатель при валидации токена
-               ValidateIssuer = true,
-               // строка, представляющая издателя
-               ValidIssuer = AuthOptions.ISSUER,
-               // будет ли валидироваться потребитель токена
-               ValidateAudience = true,
-               // установка потребителя токена
-               ValidAudience = AuthOptions.AUDIENCE,
-               // будет ли валидироваться время существования
-               ValidateLifetime = true,
-               // установка ключа безопасности
-               IssuerSigningKey = AuthOptions.GetSymmetricSecurityKey(),
-               // валидация ключа безопасности
-               ValidateIssuerSigningKey = true,
-           };
-       });
-
+        services.AddAuthentication();
         services.AddAuthorization();// добавление сервисов авторизации
+
+        services.AddHostedService<StartService>();
     }
 
 

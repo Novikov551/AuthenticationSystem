@@ -1,4 +1,6 @@
-﻿using System.ComponentModel.DataAnnotations;
+﻿using FluentValidation;
+using System.ComponentModel.DataAnnotations;
+using System.Text.RegularExpressions;
 
 namespace AuthenticationSystem.Client.Models.Login
 {
@@ -8,6 +10,8 @@ namespace AuthenticationSystem.Client.Models.Login
         public string Email { get; set; }
         [Required]
         public string Password { get; set; }
+
+        public bool RememberMe { get; set; }
 
         public static LoginViewModel CreateEmpty()
         {
@@ -19,12 +23,11 @@ namespace AuthenticationSystem.Client.Models.Login
         }
     }
 
-    //public class LoginViewModelValidator : AbstractValidator<LoginViewModel>
-    //{
-    //    public LoginViewModelValidator()
-    //    {
-    //        RuleFor(p => p.Email).EmailAddress();
-    //        RuleFor(p => p.Password).MinimumLength(8).Matches("\"^(?=.*[A-Za-z])(?=.*\\d)[A-Za-z\\d]{8,}$\"");
-    //    }
-    //}
+    public class LoginViewModelValidator : AbstractValidator<LoginViewModel>
+    {
+        public LoginViewModelValidator()
+        {
+            RuleFor(p => p.Email).EmailAddress();
+        }
+    }
 }

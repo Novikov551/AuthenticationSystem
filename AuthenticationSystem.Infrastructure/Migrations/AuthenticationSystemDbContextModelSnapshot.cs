@@ -22,12 +22,50 @@ namespace AuthenticationSystem.Infrastructure.Migrations
 
             NpgsqlModelBuilderExtensions.UseIdentityByDefaultColumns(modelBuilder);
 
+            modelBuilder.Entity("AuthenticationSystem.Domain.Core.Role", b =>
+                {
+                    b.Property<Guid>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("uuid")
+                        .HasColumnName("id");
+
+                    b.Property<DateTime>("CreatedDate")
+                        .HasColumnType("timestamp with time zone")
+                        .HasColumnName("created_date");
+
+                    b.Property<string>("RoleName")
+                        .IsRequired()
+                        .HasColumnType("text")
+                        .HasColumnName("role_name");
+
+                    b.Property<byte[]>("RoleType")
+                        .IsRequired()
+                        .HasColumnType("bytea")
+                        .HasColumnName("role_type");
+
+                    b.Property<DateTime>("UpdatedDate")
+                        .HasColumnType("timestamp with time zone")
+                        .HasColumnName("modified_date");
+
+                    b.Property<Guid>("Version")
+                        .HasColumnType("uuid")
+                        .HasColumnName("version");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("role", (string)null);
+                });
+
             modelBuilder.Entity("UserAuthenticationSystem.Domain.Core.User", b =>
                 {
                     b.Property<Guid>("Id")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("uuid")
                         .HasColumnName("id");
+
+                    b.Property<DateOnly?>("BirthDate")
+                        .HasColumnType("date")
+                        .HasColumnName("birth_date");
 
                     b.Property<DateTime>("CreatedDate")
                         .HasColumnType("timestamp with time zone")
@@ -48,6 +86,14 @@ namespace AuthenticationSystem.Infrastructure.Migrations
                         .HasColumnType("text")
                         .HasColumnName("password_hash");
 
+                    b.Property<int?>("PhoneNumber")
+                        .HasColumnType("integer")
+                        .HasColumnName("phone_number");
+
+                    b.Property<Guid>("RoleId")
+                        .HasColumnType("uuid")
+                        .HasColumnName("role_id");
+
                     b.Property<string>("Surname")
                         .IsRequired()
                         .HasColumnType("text")
@@ -63,7 +109,23 @@ namespace AuthenticationSystem.Infrastructure.Migrations
 
                     b.HasKey("Id");
 
+                    b.HasIndex("EmailHash")
+                        .IsUnique();
+
+                    b.HasIndex("RoleId");
+
                     b.ToTable("user", (string)null);
+                });
+
+            modelBuilder.Entity("UserAuthenticationSystem.Domain.Core.User", b =>
+                {
+                    b.HasOne("AuthenticationSystem.Domain.Core.Role", "Role")
+                        .WithMany()
+                        .HasForeignKey("RoleId")
+                        .OnDelete(DeleteBehavior.NoAction)
+                        .IsRequired();
+
+                    b.Navigation("Role");
                 });
 #pragma warning restore 612, 618
         }

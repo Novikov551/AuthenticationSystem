@@ -27,7 +27,7 @@ namespace UserAuthenticationSystem.Controllers
                 return BadRequest(user.Errors.First().Message);
             }
 
-            return Ok(UserConverter.Convert(user.Value));
+            return Ok(UserConverter.Convert(user.Value, user.Value.Role));
         }
 
         [HttpPost("register")]
@@ -39,7 +39,7 @@ namespace UserAuthenticationSystem.Controllers
                 return BadRequest(user.Errors.First().Message);
             }
 
-            return Ok(UserConverter.Convert(user.Value));
+            return Ok(UserConverter.Convert(user.Value, user.Value.Role));
         }
     }
 }

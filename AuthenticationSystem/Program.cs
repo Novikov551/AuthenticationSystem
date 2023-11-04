@@ -4,6 +4,7 @@ using Microsoft.AspNetCore.Hosting;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Hosting;
 using Serilog;
+using Stemy.Dairy.FactStash.Services;
 
 public class Program
 {
@@ -21,11 +22,15 @@ public class Program
         {
             Log.Information("Application Starting");
             var host = CreateHostBuilder(args).Build();
-            //using (var scope = host.Services.CreateScope())
-            //{
-            //    var db = scope.ServiceProvider.GetRequiredService<AuthenticationSystemDbContext>();
-            //    await db.Database.MigrateAsync();
-            //}
+            using (var scope = host.Services.CreateScope())
+            {
+                //var db = scope.ServiceProvider.GetRequiredService<AuthenticationSystemDbContext>();
+                //await db.Database.MigrateAsync();
+
+                await scope.ServiceProvider.GetRequiredService<SeederService>()
+                      .SeedAsync();
+            }
+
 
             await host.RunAsync();
         }

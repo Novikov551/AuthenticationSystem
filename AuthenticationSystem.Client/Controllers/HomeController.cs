@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Authorization;
+﻿using AuthenticationSystem.Domain.Core;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 namespace AuthenticationSystem.Client.Controllers
@@ -12,13 +13,14 @@ namespace AuthenticationSystem.Client.Controllers
             _logger = logger;
         }
 
-        [Authorize]
+        [Authorize(Roles = "1,10,100")]
+        [HttpGet]
         public IActionResult Index()
         {
             return View();
         }
 
-        [Authorize]
+        [Authorize(Roles = "1,10,100")]
         public IActionResult Privacy()
         {
             return View();

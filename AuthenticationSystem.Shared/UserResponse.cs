@@ -1,4 +1,5 @@
 ﻿using Newtonsoft.Json;
+using System.Data;
 using System.Text.Json.Serialization;
 
 namespace AuthenticationSystem.Shared
@@ -16,5 +17,17 @@ namespace AuthenticationSystem.Shared
         [JsonProperty("Id")]
         [JsonPropertyName("Id")]
         public Guid Id { get; set; }
+
+        [JsonProperty("PhoneNumber")]
+        [JsonPropertyName("PhoneNumber")]
+        public int? PhoneNumber { get; set; }
+
+        [JsonProperty("BirthDate")]
+        [JsonPropertyName("BirthDate")]
+        public DateOnly? BirthDate { get; set; }
+
+        [JsonProperty("Role")]
+        [JsonPropertyName("Role")]
+        public RoleResponse Role { get; set; }
     }
 }
